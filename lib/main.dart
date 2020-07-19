@@ -3,8 +3,15 @@ import 'package:audioplayers/audio_cache.dart';
 
 void main() => runApp(XylophoneApp());
 
+// This program is a XylophoneApp. It doesn't do a whole lot right now.
+// There will be more functionality eventually. Hopefully I remember
+// to take this comment out?
 class XylophoneApp extends StatelessWidget {
-  final player = AudioCache();
+  void playSound(int note) {
+    final player = AudioCache();
+    player.play('note$note.wav');
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,43 +21,43 @@ class XylophoneApp extends StatelessWidget {
             children: <Widget>[
               FlatButton(
                 onPressed: () {
-                  player.play('note1.wav');
+                  playSound(1);
                 },
                 color: Colors.red,
               ),
               FlatButton(
                 onPressed: () {
-                  player.play('note2.wav');
+                  playSound(2);
                 },
                 color: Colors.orange,
               ),
               FlatButton(
                 onPressed: () {
-                  player.play('note3.wav');
+                  playSound(3);
                 },
                 color: Colors.yellow,
               ),
               FlatButton(
                 onPressed: () {
-                  player.play('note4.wav');
+                  playSound(4);
                 },
                 color: Colors.green,
               ),
               FlatButton(
                 onPressed: () {
-                  player.play('note5.wav');
+                  playSound(5);
                 },
                 color: Colors.teal,
               ),
               FlatButton(
                 onPressed: () {
-                  player.play('note6.wav');
+                  playSound(6);
                 },
                 color: Colors.blue,
               ),
               FlatButton(
                 onPressed: () {
-                  player.play('note7.wav');
+                  playSound(7);
                 },
                 color: Colors.purple,
               ),
