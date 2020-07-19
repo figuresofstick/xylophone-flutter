@@ -3,6 +3,9 @@ import 'package:audioplayers/audio_cache.dart';
 
 void main() => runApp(XylophoneApp());
 
+// This program is a XylophoneApp. It doesn't do a whole lot right now.
+// There will be more functionality eventually. Hopefully I remember
+// to take this comment out?
 class XylophoneApp extends StatelessWidget {
   void playSound(int note) {
     final player = AudioCache();
